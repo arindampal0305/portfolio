@@ -26,7 +26,7 @@ const projects = [
         title: 'Solace',
         subtitle: 'Java | Spring Boot | JWT | SQL | JS',
         content: 'Built an anonymous, secure student–psychologist platform with Spring Boot, JWT, and SQL, featuring encrypted sessions, role-based access, and real-time appointment APIs.',
-        buttonText: 'See Repository',
+        buttonText: 'In Progress...',
         buttonLink: null,
         color: '#a855f7',
         images: [
