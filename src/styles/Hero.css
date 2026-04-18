@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+/* ── Fixed background that persists through scroll ── */
+.site-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+}
+
+.site-bg-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* ── Scrollable content layer ── */
+.site-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* ── Hero section (first viewport) ── */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* ── Vertical center wrapper for name + rotating text ── */
+.hero-center {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.hero-name {
+    pointer-events: none;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-name canvas {
+    pointer-events: auto;
+}
+
+/* ── Rotating text (purple area) ── */
+.hero-rotating-text {
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+    user-select: none;
+}
+
+.rotating-text-main {
+    padding: 0.35rem 1rem;
+    background: #a855f7;
+    color: #000;
+    overflow: hidden;
+    justify-content: center;
+    border-radius: 0.5rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: clamp(1rem, 2.5vw, 1.75rem);
+    letter-spacing: 0.02em;
+}
+
+.rotating-text-split {
+    overflow: hidden;
+    padding-bottom: 0.15rem;
+}
+
+@media (min-width: 640px) {
+    .rotating-text-main {
+        padding: 0.5rem 1.25rem;
+    }
+    .rotating-text-split {
+        padding-bottom: 0.25rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .rotating-text-main {
+        padding: 0.65rem 1.5rem;
+    }
+    .rotating-text-split {
+        padding-bottom: 0.25rem;
+    }
+}

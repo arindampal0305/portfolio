@@ -1,0 +1,21 @@
+.scroll-reveal {
+  margin: 24px 0;
+}
+
+.scroll-reveal-text {
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  line-height: 1.9;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+.word {
+  display: inline-block;
+}
+
+.word-highlight {
+  color: #c084fc;
+  font-weight: 600;
+  text-shadow: 0 0 12px rgba(192, 132, 252, 0.4), 0 0 30px rgba(192, 132, 252, 0.15);
+}

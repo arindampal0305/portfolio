@@ -1,0 +1,80 @@
+.dock-outer {
+  display: flex;
+  max-width: 100%;
+  align-items: flex-start;   /* items grow downward from top panel */
+}
+
+/* Panel anchored to the TOP of dock-outer */
+.dock-panel {
+  position: absolute;
+  top: 0.5rem;               /* sits at top instead of bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: flex-start;   /* items hang down from top edge */
+  width: fit-content;
+  gap: 0.75rem;
+  border-radius: 1rem;
+  background-color: rgba(18, 15, 23, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.5rem 0.75rem 0;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.45),
+    0 1px 0 rgba(255, 255, 255, 0.05) inset;
+}
+
+.dock-item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: rgba(18, 15, 23, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.2),
+    0 2px 4px -1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.dock-item:hover {
+  background-color: rgba(168, 85, 247, 0.12);
+  border-color: rgba(168, 85, 247, 0.35);
+}
+
+.dock-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.75);
+  transition: color 0.2s ease;
+}
+
+.dock-item:hover .dock-icon {
+  color: #fff;
+}
+
+/* Label appears BELOW the item (top nav) */
+.dock-label {
+  position: absolute;
+  top: calc(100% + 6px);   /* below the item */
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  white-space: nowrap;
+  border-radius: 0.375rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(18, 15, 23, 0.9);
+  padding: 0.125rem 0.5rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 0.02em;
+  pointer-events: none;
+  z-index: 50;
+}

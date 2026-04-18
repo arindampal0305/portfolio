@@ -1,0 +1,71 @@
+.proj-carousel-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.proj-carousel-track {
+  display: flex;
+  height: 280px;
+}
+
+.proj-carousel-item {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: grab;
+  background: #0d0d0d;
+}
+
+.proj-carousel-item:active {
+  cursor: grabbing;
+}
+
+.proj-carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+  border-radius: 14px;
+}
+
+.proj-carousel-indicators-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 14px;
+}
+
+.proj-carousel-indicators {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.proj-carousel-dot {
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 150ms, transform 150ms;
+}
+
+.proj-carousel-dot.active {
+  background-color: #a855f7;
+  box-shadow: 0 0 8px rgba(168, 85, 247, 0.6);
+}
+
+.proj-carousel-dot.inactive {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.proj-carousel-dot:hover {
+  background-color: rgba(168, 85, 247, 0.6);
+}

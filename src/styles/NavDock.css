@@ -1,0 +1,17 @@
+/* Fixed across the very top of the viewport, always on top */
+.nav-dock-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;   /* pass-through on the wrapper itself… */
+}
+
+/* …but the dock itself is interactive */
+.nav-dock-wrapper .dock-outer,
+.nav-dock-wrapper .dock-panel {
+    pointer-events: auto;
+}

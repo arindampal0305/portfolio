@@ -1,0 +1,183 @@
+.projects {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    padding: 100px 40px 120px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.projects-inner {
+    max-width: 1200px;
+    width: 100%;
+    /* Slightly towards the left */
+    padding-left: 10%;
+    padding-right: 0;
+}
+
+.projects-heading {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    color: rgba(255, 255, 255, 0.85);
+    letter-spacing: 0.06em;
+    margin-bottom: 72px;
+    font-weight: 400;
+    text-shadow: 0 0 40px rgba(192, 132, 252, 0.15);
+}
+
+/* ── Each project row: card left, carousel right ── */
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.project-row {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+/* ── Card side ── */
+.project-card-wrapper {
+    flex: 0 0 380px;
+    min-width: 0;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 32px 28px 28px;
+    background: rgba(10, 8, 18, 0.82);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    min-height: 280px;
+}
+
+.project-card-top {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.project-accent-bar {
+    width: 36px;
+    height: 3px;
+    border-radius: 2px;
+    margin-bottom: 4px;
+}
+
+.project-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 0.05em;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.project-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin: 0;
+    opacity: 0.9;
+}
+
+.project-content {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+    flex: 1;
+}
+
+.project-card-footer {
+    margin-top: 4px;
+}
+
+/* ── Button ── */
+.project-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    border-radius: 8px;
+    border: 1.5px solid;
+    background: transparent;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.25s, box-shadow 0.25s, transform 0.2s;
+}
+
+.project-btn:hover {
+    background: color-mix(in srgb, var(--btn-color) 12%, transparent);
+    box-shadow: 0 0 18px color-mix(in srgb, var(--btn-color) 35%, transparent);
+    transform: translateY(-2px);
+}
+
+.project-btn-arrow {
+    transition: transform 0.2s;
+}
+
+.project-btn:hover .project-btn-arrow {
+    transform: translateX(4px);
+}
+
+.project-btn-disabled {
+    cursor: not-allowed;
+    opacity: 0.45;
+}
+
+.project-btn-disabled:hover {
+    background: transparent;
+    box-shadow: none;
+    transform: none;
+}
+
+/* ── Carousel side ── */
+.project-carousel-wrapper {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+    .project-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 28px;
+    }
+
+    .project-card-wrapper {
+        flex: none;
+        width: 100%;
+    }
+
+    .project-carousel-wrapper {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .projects-inner {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .projects {
+        padding: 80px 20px 100px;
+    }
+}

@@ -1,0 +1,56 @@
+.social-bar {
+    position: relative;
+    z-index: 1;
+    padding: 0 0 100px;
+}
+
+/* ── Divider row ── */
+.social-divider {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 10%;
+    margin-bottom: 52px;
+}
+
+.social-divider-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(255, 255, 255, 0.15) 30%,
+        rgba(168, 85, 247, 0.35) 50%,
+        rgba(255, 255, 255, 0.15) 70%,
+        transparent
+    );
+}
+
+.social-divider-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.3);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* ── Logo loop wrapper ── */
+.social-loop-wrap {
+    height: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+    .social-divider {
+        padding: 0 20px;
+    }
+
+    .social-bar {
+        padding-bottom: 64px;
+    }
+}
