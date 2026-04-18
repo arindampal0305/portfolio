@@ -10,7 +10,7 @@ const highlightTerms = [
 ]
 
 const paragraphs = [
-    `Bachelor of Computer Applications Undergratuate, from Birla Institute of Technology, Mesra (Lalpur Campus).`,
+    `Bachelor of Computer Applications Undergraduate, from Birla Institute of Technology, Mesra (Lalpur Campus).`,
 
     `Computer Science student focused on backend development with Java, building a strong foundation in Data Structures & Algorithms and core programming concepts. I approach problem-solving with consistency and discipline, having solved 100+ problems on LeetCode to strengthen logical thinking and code efficiency.`,
 
